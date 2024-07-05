@@ -1709,4 +1709,6 @@ $nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, remo
 
 $pre-color:                         null !default;
 
-@import "variables-dark";
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$font-family: Arial, sans-serif;
