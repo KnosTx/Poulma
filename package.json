@@ -2,9 +2,10 @@
   "name": "poulma",
   "version": "1.0.0",
   "scripts": {
-    "build:css": "sass src/scss/main.scss dist/main.css",
-    "postcss": "postcss dist/main.css --use autoprefixer -o dist/main.css",
-    "build": "npm run build:css && npm run postcss"
+    "build:css": "npx sass src/scss/main.scss dist/main.css",
+    "postcss": "npx postcss dist/main.css --use autoprefixer -o dist/main.css",
+    "build:js": "cp src/js/navbar.js dist/",
+    "build": "npm run build:css && npm run postcss && npm run build:js"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.0",
