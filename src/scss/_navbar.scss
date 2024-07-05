@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 1rem;
+
+  .navbar-brand {
+    color: white;
+    font-size: 1.25rem;
+    text-decoration: none;
+  }
+
+  .navbar-nav {
+    display: flex;
+    list-style: none;
+
+    .nav-item {
+      margin-left: 1rem;
+
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
