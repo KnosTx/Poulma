@@ -39,4 +39,45 @@ document.addEventListener('DOMContentLoaded', function() {
       alert.style.display = 'none';
     }
   });
+
+  // Tabs
+  const tabs = document.querySelectorAll('.tabs .tab');
+  const tabContents = document.querySelectorAll('.tab-content > div');
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      tabContents.forEach(content => content.style.display = 'none');
+      tabContents[index].style.display = 'block';
+    });
+  });
+
+  // Set default active tab
+  if (tabs.length > 0) {
+    tabs[0].classList.add('active');
+    tabContents[0].style.display = 'block';
+  }
+
+  // Dropdown
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const dropdownMenu = this.nextElementSibling;
+      dropdownMenu.classList.toggle('show');
+    });
+  });
+
+  window.addEventListener('click', function(event) {
+    if (!event.target.matches('.dropdown-toggle')) {
+      const dropdowns = document.querySelectorAll('.dropdown-menu');
+      dropdowns.forEach(dropdown => {
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      });
+    }
+  });
 });
