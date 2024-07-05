@@ -1,8 +1,15 @@
 body {
   font-family: Arial, sans-serif;
 }
-@import 'variables';
-@import 'variables-dark';
+
+@import "mixins/banner";
+@include bsBanner("");
+@import "functions";
+@import "variables";
+@import "variables-dark";
+@import "maps";
+@import "mixins";
+@import "utilities";
 @import 'mixins';
 @import 'buttons';
 @import 'navbar';
