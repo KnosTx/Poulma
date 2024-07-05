@@ -1,0 +1,15 @@
+{
+  "name": "poulma",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "sass src/scss/main.scss dist/main.css",
+    "postcss": "postcss dist/main.css --use autoprefixer -o dist/main.css",
+    "build": "npm run build:css && npm run postcss"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0",
+    "postcss-cli": "^8.0.0",
+    "sass": "^1.0.0"
+  }
+}
