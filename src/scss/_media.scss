@@ -1,0 +1,26 @@
+.media {
+  display: flex;
+  align-items: flex-start;
+
+  .media-image {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background-color: #e9ecef;
+  }
+
+  .media-body {
+    flex-grow: 1;
+
+    h5 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
