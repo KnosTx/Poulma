@@ -1,6 +1,6 @@
 {
   "name": "poulma",
-  "version": "1.0.0",
+  "version": "1.3.2",
   "scripts": {
     "build:css": "npx sass src/scss/poulma.scss dist/poulma.css",
     "postcss": "npx postcss dist/poulma.css --use autoprefixer -o dist/poulma.css",
